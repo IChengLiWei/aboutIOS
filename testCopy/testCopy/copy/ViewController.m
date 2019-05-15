@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "NewsDetailViewController.h"
+#import "Binar search.h"
 @interface ViewController ()
 @property(strong, nonatomic)NSString *strongStr;
 @property(copy, nonatomic)NSString *cStr;
@@ -17,8 +18,22 @@
 @end
 
 @implementation ViewController
+- (IBAction)gonext:(id)sender {
+    NewsDetailViewController *nextvc=[[NewsDetailViewController alloc] init];
+    [self.navigationController pushViewController:nextvc animated:YES];
+}
+
+- (IBAction)gotoBInery:(id)sender {
+    Binar_search *nextVC=[[Binar_search alloc] init];
+    [self.navigationController pushViewController:nextVC animated:YES];
+}
+
+
+
+
+
 /*
- 1. copy出来的字符串一定是不可变字符串，如果传入的是可变字符串，会发生深拷贝为不可变字符串，否则为浅拷贝。
+ 1. copy出来的字符串一定是不可变字符串，如果传入的是可变字符串，会发生深拷贝为不可变字符串，否则为浅拷贝(传入不可变字符串)。
  2. mutablecopy，一定是深拷贝，拷贝出来的一定是可变字符串或者数组，即使传入的是不可变字符串或者数组。
  3. NSString的原因在于使改字符串不可变
  4. 如果mutable使用Copy,则会导致崩溃,因为深copy已经将对象换为不可变对象
