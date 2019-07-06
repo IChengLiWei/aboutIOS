@@ -44,24 +44,36 @@
 //    [self CopyTest];
 //    [self GCDtest];
     UIView *newView=[[UIView alloc] init];
-    newView.backgroundColor=[UIColor redColor];
+    newView.backgroundColor=[UIColor purpleColor];
   
     [self.view addSubview:newView];
     [newView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.equalTo(self.view);
         make.height.width.equalTo(@200);
     }];
-     [newView.superview layoutIfNeeded];
+    
+    
+    
+    
+    [newView.superview layoutIfNeeded];
+    UIView *contentView=[[UIView alloc] initWithFrame:newView.bounds];
+    contentView.backgroundColor=[UIColor greenColor];
+    [newView addSubview:contentView];
+    newView.layer.shadowOpacity=0.8;
+    newView.layer.shadowColor=[UIColor blackColor].CGColor;
+    newView.layer.shadowOffset=CGSizeMake(0, 7);
+    newView.layer.shadowRadius=10;
     newView.layer.cornerRadius=100;
     
-    CALayer *shadowLayer      = [CALayer layer];
-    shadowLayer.backgroundColor=[UIColor purpleColor].CGColor;
-    shadowLayer.shadowColor   = [UIColor blackColor].CGColor;
-    shadowLayer.shadowOffset  = CGSizeMake(0, 0);
-    shadowLayer.shadowOpacity = 1;
-    shadowLayer.shadowRadius  = 10;
-    shadowLayer.frame         = newView.bounds;
-    [newView.layer addSublayer:shadowLayer];
+    
+    CALayer *circleLayer=[CALayer layer];
+    circleLayer.cornerRadius=100;
+    circleLayer.masksToBounds=YES;
+    circleLayer.frame=newView.frame;
+    circleLayer.backgroundColor=[UIColor redColor].CGColor;
+    
+    [self.view.layer addSublayer:circleLayer];
+  
    
   
     
