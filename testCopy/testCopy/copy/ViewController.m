@@ -7,27 +7,21 @@
 //
 
 #import "ViewController.h"
+
 #import "NewsDetailViewController.h"
 #import "Binar search.h"
-#import <Masonry.h>
-@interface ViewController ()
+#import "TimerTestViewController.h"
+#import "LayerViewController.h"
+#import "GCDViewController.h"
+
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong, nonatomic)NSString *strongStr;
 @property(copy, nonatomic)NSString *cStr;
 
 @property(copy, nonatomic)NSMutableString *mStr;
-@property(assign, nonatomic)NSInteger testCount;
 @end
 
 @implementation ViewController
-- (IBAction)gonext:(id)sender {
-    NewsDetailViewController *nextvc=[[NewsDetailViewController alloc] init];
-    [self.navigationController pushViewController:nextvc animated:YES];
-}
-
-- (IBAction)gotoBInery:(id)sender {
-    Binar_search *nextVC=[[Binar_search alloc] init];
-    [self.navigationController pushViewController:nextVC animated:YES];
-}
 
 
 
@@ -41,84 +35,89 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self CopyTest];
-//    [self GCDtest];
-    UIView *newView=[[UIView alloc] init];
-    newView.backgroundColor=[UIColor purpleColor];
-  
-    [self.view addSubview:newView];
-    [newView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.centerY.equalTo(self.view);
-        make.height.width.equalTo(@200);
-    }];
-    
-    
-    
-    
-    [newView.superview layoutIfNeeded];
-    UIView *contentView=[[UIView alloc] initWithFrame:newView.bounds];
-    contentView.backgroundColor=[UIColor greenColor];
-    [newView addSubview:contentView];
-    newView.layer.shadowOpacity=0.8;
-    newView.layer.shadowColor=[UIColor blackColor].CGColor;
-    newView.layer.shadowOffset=CGSizeMake(0, 7);
-    newView.layer.shadowRadius=10;
-    newView.layer.cornerRadius=100;
-    
-    
-    CALayer *circleLayer=[CALayer layer];
-    circleLayer.cornerRadius=100;
-    circleLayer.masksToBounds=YES;
-    circleLayer.frame=newView.frame;
-    circleLayer.backgroundColor=[UIColor redColor].CGColor;
-    
-    [self.view.layer addSublayer:circleLayer];
-  
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self CopyTest];
+ 
    
-  
-    
-    
-    
-    
-    
   
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 -(void)CopyTest{
     NSMutableString *mutStr=[[NSMutableString alloc] initWithFormat:@"啦啦啦"];
     self.strongStr=mutStr;
     mutStr=nil;
 
-  
-    
-    
     NSLog(@"%@,---指向对象的内存%p---指向对象的内存%p",self.strongStr,self.strongStr,mutStr);
  
 }
--(void)GCDtest{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    switch (indexPath.row) {
+        case 0:
+        {
+            cell.textLabel.text=@"冒泡排序";
+            
+        }
+            break;
+        case 1:
+        {
+            cell.textLabel.text=@"定时器";
+            
+        }
+            break;
+        case 2:
+        {
+            cell.textLabel.text=@"Layer变换";
+            
+        }
+            break;
+        case 3:
+        {
+            cell.textLabel.text=@"GCD线程实现";
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
     
-    dispatch_group_t thegroup=dispatch_group_create();
-    dispatch_queue_t thequeue=dispatch_queue_create("curent", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_group_async(thegroup, thequeue, ^{
-  
-        self.testCount+=1;
-        NSLog(@"%@",[NSThread currentThread]);
-    });
-    dispatch_group_async(thegroup, thequeue, ^{
-   
-        self.testCount+=2;
-        NSLog(@"%@",[NSThread currentThread]);
-    });
-    dispatch_group_notify(thegroup, dispatch_get_main_queue(), ^{
-         NSLog(@"%ld",self.testCount);
-    });
-    
-   
-    
-    
-    
-    
+    return cell;
 }
-
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:
+        {
+           
+            Binar_search *nextVC=[[Binar_search alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+        }
+            break;
+        case 1:
+        {
+            TimerTestViewController *nextVC=[[TimerTestViewController alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+            
+        }
+            break;
+        case 2:
+        {
+            LayerViewController *nextVC=[[LayerViewController alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+            
+        }
+            break;
+        case 3:
+        {
+            GCDViewController *nextVC=[[GCDViewController alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+            
+        }
+            break;
+}
+}
 @end

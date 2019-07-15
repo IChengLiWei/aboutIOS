@@ -17,13 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-    // Do any additional setup after loading the view.
-    NSArray *arr=@[@1,@4,@9,@10,@2,@3,@59];
-   NSArray* newArr= [self maopaoPaixu:[NSMutableArray arrayWithArray:arr]];
-    NSLog(@"%@iiiii%@",arr,newArr);
-//    NSInteger result= [self binarySearch:90 inArr:newArr];
-//    NSInteger result2=[self binarySearch:90 inArr:newArr low:0 high:arr.count];
-//    NSLog(@"%ld,%ld",(long)result,(long)result2);
+
+    [self logArrayFunction:@[@1,@4,@9,@10,@2,@3,@59].mutableCopy];
+
 }
 //循环
 -(NSInteger)binarySearch:(double)key inArr:(NSArray*)arr{
@@ -78,20 +74,43 @@
 
 
 
--(NSArray*) maopaoPaixu:(NSMutableArray*)originArr{
-
-    for (int i=0; i<originArr.count; i++) {
-        for (int j=0; j<originArr.count-i; j++) {
-            if (originArr[j]>originArr[j+1]) {
-                
-                int temp=[originArr[j] intValue];
-                originArr[j]=originArr[j+1];
-                originArr[j+1]=@(temp);
+- (void)logArrayFunction:(NSMutableArray *)arr {
+    int count  = 0;
+    int forcount  = 0;
+    
+    for (int i = 0; i < arr.count; i++) {
+        forcount++;
+        for (int j = (int)arr.count-2; j >= i; j--) {
+            count++;
+            if ([arr[j] intValue]< [arr[j+1] intValue]) {
+                [arr exchangeObjectAtIndex:j withObjectAtIndex:j+1];
             }
         }
+        [self logArr:arr];
     }
-    return originArr;
-    
+    NSLog(@"循环次数：%d",forcount);
+    NSLog(@"共%d次比较",count);
+}
+
+
+- (void)logArray:(NSMutableArray *)arr {
+ 
+    for (int i = 0; i < arr.count; i++) {
+        for (int j = i+1; j < arr.count; j++) {
+            if ([arr[i] intValue] > [arr[j] intValue]) {
+                [arr exchangeObjectAtIndex:i withObjectAtIndex:j];
+            }
+        }
+        [self logArr:arr];
+    }
+}
+//打印数组
+- (void)logArr:(NSMutableArray * )array {
+    NSString * str = @"";
+    for (NSNumber * value in array) {
+        str = [str stringByAppendingString:[NSString stringWithFormat:@"%zd ",[value integerValue]]];
+    }
+    NSLog(@"%@",str);
 }
 
 /*

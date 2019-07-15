@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		451C298B228BFEC600C286C6 /* Binar search.m in Sources */ = {isa = PBXBuildFile; fileRef = 451C298A228BFEC600C286C6 /* Binar search.m */; };
-		451C298E228C0A3C00C286C6 /* BinaryArr.m in Sources */ = {isa = PBXBuildFile; fileRef = 451C298D228C0A3C00C286C6 /* BinaryArr.m */; };
 		45280969227308E6009493D1 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45280966227308E6009493D1 /* NewsDetailViewController.m */; };
 		4528096A227308E6009493D1 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45280968227308E6009493D1 /* NewsDetailViewController.xib */; };
+		45289CDC22D88412006E6A3E /* TimerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45289CDB22D88412006E6A3E /* TimerTestViewController.m */; };
 		452FADE92268681E002872B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADE82268681E002872B2 /* AppDelegate.m */; };
 		452FADEC2268681E002872B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADEB2268681E002872B2 /* ViewController.m */; };
 		452FADEF2268681E002872B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452FADED2268681E002872B2 /* Main.storyboard */; };
 		452FADF122686825002872B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452FADF022686825002872B2 /* Assets.xcassets */; };
 		452FADF422686825002872B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452FADF222686825002872B2 /* LaunchScreen.storyboard */; };
 		452FADF722686826002872B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADF622686826002872B2 /* main.m */; };
+		45D39BAD22DC816000F2B256 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D39BAC22DC816000F2B256 /* GCDViewController.m */; };
+		45D39BB122DC81A000F2B256 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D39BB022DC81A000F2B256 /* LayerViewController.m */; };
 		5FF18EB53794C7A171CACA03 /* libPods-testCopy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F12A14A08D4669EACA70983 /* libPods-testCopy.a */; };
 /* End PBXBuildFile section */
 
@@ -24,11 +26,11 @@
 		2F12A14A08D4669EACA70983 /* libPods-testCopy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testCopy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		451C2989228BFEC600C286C6 /* Binar search.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Binar search.h"; sourceTree = "<group>"; };
 		451C298A228BFEC600C286C6 /* Binar search.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Binar search.m"; sourceTree = "<group>"; };
-		451C298C228C0A3C00C286C6 /* BinaryArr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryArr.h; sourceTree = "<group>"; };
-		451C298D228C0A3C00C286C6 /* BinaryArr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryArr.m; sourceTree = "<group>"; };
 		45280966227308E6009493D1 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		45280967227308E6009493D1 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
 		45280968227308E6009493D1 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
+		45289CDA22D88412006E6A3E /* TimerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerTestViewController.h; sourceTree = "<group>"; };
+		45289CDB22D88412006E6A3E /* TimerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerTestViewController.m; sourceTree = "<group>"; };
 		452FADE42268681E002872B2 /* testCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452FADE72268681E002872B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		452FADE82268681E002872B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +41,10 @@
 		452FADF322686825002872B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		452FADF522686826002872B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452FADF622686826002872B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45D39BAB22DC816000F2B256 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		45D39BAC22DC816000F2B256 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		45D39BAF22DC81A000F2B256 /* LayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
+		45D39BB022DC81A000F2B256 /* LayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerViewController.m; sourceTree = "<group>"; };
 		84BDE28D4CC84B52C56A7F31 /* Pods-testCopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testCopy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testCopy/Pods-testCopy.debug.xcconfig"; sourceTree = "<group>"; };
 		BA2680B3D40BEE707DDF73D2 /* Pods-testCopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testCopy.release.xcconfig"; path = "Pods/Target Support Files/Pods-testCopy/Pods-testCopy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,8 +83,6 @@
 			children = (
 				451C2989228BFEC600C286C6 /* Binar search.h */,
 				451C298A228BFEC600C286C6 /* Binar search.m */,
-				451C298C228C0A3C00C286C6 /* BinaryArr.h */,
-				451C298D228C0A3C00C286C6 /* BinaryArr.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -91,6 +95,15 @@
 				45280968227308E6009493D1 /* NewsDetailViewController.xib */,
 			);
 			path = wkwebview;
+			sourceTree = "<group>";
+		};
+		45289CD922D883F7006E6A3E /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				45289CDA22D88412006E6A3E /* TimerTestViewController.h */,
+				45289CDB22D88412006E6A3E /* TimerTestViewController.m */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		452FADDB2268681E002872B2 = {
@@ -114,6 +127,9 @@
 		452FADE62268681E002872B2 /* testCopy */ = {
 			isa = PBXGroup;
 			children = (
+				45D39BAE22DC818600F2B256 /* layer */,
+				45D39BAA22DC814B00F2B256 /* GCD */,
+				45289CD922D883F7006E6A3E /* Timer */,
 				451C2988228BFE5500C286C6 /* Algorithm */,
 				451C2987228BF6BF00C286C6 /* copy */,
 				452809652273083F009493D1 /* wkwebview */,
@@ -126,6 +142,24 @@
 				452FADF622686826002872B2 /* main.m */,
 			);
 			path = testCopy;
+			sourceTree = "<group>";
+		};
+		45D39BAA22DC814B00F2B256 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				45D39BAB22DC816000F2B256 /* GCDViewController.h */,
+				45D39BAC22DC816000F2B256 /* GCDViewController.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		45D39BAE22DC818600F2B256 /* layer */ = {
+			isa = PBXGroup;
+			children = (
+				45D39BAF22DC81A000F2B256 /* LayerViewController.h */,
+				45D39BB022DC81A000F2B256 /* LayerViewController.m */,
+			);
+			path = layer;
 			sourceTree = "<group>";
 		};
 		8C2F3140101D33D07A2F6187 /* Pods */ = {
@@ -231,10 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45280969227308E6009493D1 /* NewsDetailViewController.m in Sources */,
+				45289CDC22D88412006E6A3E /* TimerTestViewController.m in Sources */,
 				452FADEC2268681E002872B2 /* ViewController.m in Sources */,
 				451C298B228BFEC600C286C6 /* Binar search.m in Sources */,
+				45D39BB122DC81A000F2B256 /* LayerViewController.m in Sources */,
+				45D39BAD22DC816000F2B256 /* GCDViewController.m in Sources */,
 				452FADF722686826002872B2 /* main.m in Sources */,
-				451C298E228C0A3C00C286C6 /* BinaryArr.m in Sources */,
 				452FADE92268681E002872B2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
