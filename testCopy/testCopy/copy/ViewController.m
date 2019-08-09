@@ -13,7 +13,7 @@
 #import "TimerTestViewController.h"
 #import "LayerViewController.h"
 #import "GCDViewController.h"
-
+#import "AnimationViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong, nonatomic)NSString *strongStr;
 @property(copy, nonatomic)NSString *cStr;
@@ -78,6 +78,18 @@
             
         }
             break;
+        case 4:
+        {
+            cell.textLabel.text=@"wkWebView高度";
+            
+        }
+            break;
+        case 5:
+        {
+            cell.textLabel.text=@"动画";
+            
+        }
+            break;
             
         default:
             break;
@@ -114,6 +126,20 @@
         case 3:
         {
             GCDViewController *nextVC=[[GCDViewController alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+            
+        }
+        break;
+        case 4:
+        {
+            NewsDetailViewController *nextVC=[[ NewsDetailViewController alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+            
+        }
+            break;
+        case 5:
+        {
+            AnimationViewController *nextVC=[[ AnimationViewController alloc] init];
             [self.navigationController pushViewController:nextVC animated:YES];
             
         }

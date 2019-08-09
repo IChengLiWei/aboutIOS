@@ -21,7 +21,9 @@
 #pragma mark -Life
 - (void)viewDidLoad {
     [super viewDidLoad];
+        self.view.backgroundColor=[UIColor whiteColor];
     self.webview=[[WKWebView alloc] init];
+    
     self.webview.scrollView.scrollEnabled=NO;
     [self.webcontentview addSubview:self.webview];
     [self.webview mas_makeConstraints:^(MASConstraintMaker *make) {
