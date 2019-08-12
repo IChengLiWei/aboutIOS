@@ -152,7 +152,7 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
         case 0:
         {
             keyFrameAni = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
-            keyFrameAni.duration = 0.3;
+            keyFrameAni.duration = 1;
             keyFrameAni.values = @[@(-(4) / 180.0*M_PI),@((4) / 180.0*M_PI),@(-(4) / 180.0*M_PI)];
             keyFrameAni.repeatCount=MAXFLOAT;
         }
@@ -289,7 +289,8 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
             //初始化动画并设置keyPath
             basicAni = [CABasicAnimation animationWithKeyPath:@"transform"];
             //3D
-            basicAni.toValue=[NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2+M_PI_4, 1, 1, 1)];
+            basicAni.toValue=[NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2+M_PI_4, 0,0 , 1)];
+            _aniLayer.anchorPoint=CGPointMake(0.5, 0.0);
             break;
         case 4:
             //初始化动画并设置keyPath
@@ -321,8 +322,8 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
     //动画速率
     //basicAni.speed = 0.1;
     //图层是否显示执行后的动画执行后的位置以及状态
-    //basicAni.removedOnCompletion = NO;
-    //basicAni.fillMode = kCAFillModeForwards;
+    basicAni.removedOnCompletion = NO;
+    basicAni.fillMode = kCAFillModeForwards;
     //动画完成后是否以动画形式回到初始值
     basicAni.autoreverses = YES;
     //动画时间偏移

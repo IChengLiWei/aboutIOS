@@ -8,6 +8,7 @@
 
 #import "AnimationViewController.h"
 #import "DetailAnimationVC.h"
+#import "CAEmitterLayerVCViewController.h"
 @interface AnimationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView * tabView;
 @property(nonatomic,strong)NSArray * section1;
@@ -52,6 +53,12 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row==4) {
+        CAEmitterLayerVCViewController *next=[[CAEmitterLayerVCViewController alloc] init];
+        [self.navigationController pushViewController:next animated:YES];
+        return;
+    }
+    
     DetailAnimationVC *nextVC=[[DetailAnimationVC alloc] init];
     nextVC.index=indexPath.row;
     [self.navigationController pushViewController:nextVC animated:YES];

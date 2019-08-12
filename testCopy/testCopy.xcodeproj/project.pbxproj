@@ -12,6 +12,7 @@
 		45280969227308E6009493D1 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45280966227308E6009493D1 /* NewsDetailViewController.m */; };
 		4528096A227308E6009493D1 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45280968227308E6009493D1 /* NewsDetailViewController.xib */; };
 		45289CDC22D88412006E6A3E /* TimerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45289CDB22D88412006E6A3E /* TimerTestViewController.m */; };
+		452CC14E22FD69CF00E8D3EA /* LayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452CC14D22FD69CF00E8D3EA /* LayerViewController.xib */; };
 		452FADE92268681E002872B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADE82268681E002872B2 /* AppDelegate.m */; };
 		452FADEC2268681E002872B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADEB2268681E002872B2 /* ViewController.m */; };
 		452FADEF2268681E002872B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452FADED2268681E002872B2 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 		452FADF722686826002872B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADF622686826002872B2 /* main.m */; };
 		453FA31522F7C254007C02A5 /* DetailAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 453FA31422F7C254007C02A5 /* DetailAnimationVC.m */; };
 		458F168622FACE9A0052C0BB /* circleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 458F168522FACE9A0052C0BB /* circleView.m */; };
+		45B842EE2300FC7F00B25707 /* TransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B842ED2300FC7F00B25707 /* TransformView.m */; };
+		45B842F223015F9500B25707 /* CAEmitterLayerVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B842F023015F9500B25707 /* CAEmitterLayerVCViewController.m */; };
+		45B842F323015F9500B25707 /* CAEmitterLayerVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45B842F123015F9500B25707 /* CAEmitterLayerVCViewController.xib */; };
 		45D39BAD22DC816000F2B256 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D39BAC22DC816000F2B256 /* GCDViewController.m */; };
 		45D39BB122DC81A000F2B256 /* LayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D39BB022DC81A000F2B256 /* LayerViewController.m */; };
 		5FF18EB53794C7A171CACA03 /* libPods-testCopy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F12A14A08D4669EACA70983 /* libPods-testCopy.a */; };
@@ -36,6 +40,7 @@
 		45280968227308E6009493D1 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
 		45289CDA22D88412006E6A3E /* TimerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerTestViewController.h; sourceTree = "<group>"; };
 		45289CDB22D88412006E6A3E /* TimerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerTestViewController.m; sourceTree = "<group>"; };
+		452CC14D22FD69CF00E8D3EA /* LayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerViewController.xib; sourceTree = "<group>"; };
 		452FADE42268681E002872B2 /* testCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452FADE72268681E002872B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		452FADE82268681E002872B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +55,11 @@
 		453FA31422F7C254007C02A5 /* DetailAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailAnimationVC.m; sourceTree = "<group>"; };
 		458F168422FACE9A0052C0BB /* circleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circleView.h; sourceTree = "<group>"; };
 		458F168522FACE9A0052C0BB /* circleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = circleView.m; sourceTree = "<group>"; };
+		45B842EC2300FC7F00B25707 /* TransformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformView.h; sourceTree = "<group>"; };
+		45B842ED2300FC7F00B25707 /* TransformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformView.m; sourceTree = "<group>"; };
+		45B842EF23015F9500B25707 /* CAEmitterLayerVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerVCViewController.h; sourceTree = "<group>"; };
+		45B842F023015F9500B25707 /* CAEmitterLayerVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerVCViewController.m; sourceTree = "<group>"; };
+		45B842F123015F9500B25707 /* CAEmitterLayerVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CAEmitterLayerVCViewController.xib; sourceTree = "<group>"; };
 		45D39BAB22DC816000F2B256 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		45D39BAC22DC816000F2B256 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		45D39BAF22DC81A000F2B256 /* LayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerViewController.h; sourceTree = "<group>"; };
@@ -103,6 +113,9 @@
 				451EC91622DDD41800275270 /* AnimationViewController.m */,
 				453FA31322F7C254007C02A5 /* DetailAnimationVC.h */,
 				453FA31422F7C254007C02A5 /* DetailAnimationVC.m */,
+				45B842EF23015F9500B25707 /* CAEmitterLayerVCViewController.h */,
+				45B842F023015F9500B25707 /* CAEmitterLayerVCViewController.m */,
+				45B842F123015F9500B25707 /* CAEmitterLayerVCViewController.xib */,
 			);
 			path = Animition;
 			sourceTree = "<group>";
@@ -177,10 +190,13 @@
 		45D39BAE22DC818600F2B256 /* layer */ = {
 			isa = PBXGroup;
 			children = (
-				45D39BAF22DC81A000F2B256 /* LayerViewController.h */,
-				45D39BB022DC81A000F2B256 /* LayerViewController.m */,
 				458F168422FACE9A0052C0BB /* circleView.h */,
 				458F168522FACE9A0052C0BB /* circleView.m */,
+				45D39BAF22DC81A000F2B256 /* LayerViewController.h */,
+				45D39BB022DC81A000F2B256 /* LayerViewController.m */,
+				452CC14D22FD69CF00E8D3EA /* LayerViewController.xib */,
+				45B842EC2300FC7F00B25707 /* TransformView.h */,
+				45B842ED2300FC7F00B25707 /* TransformView.m */,
 			);
 			path = layer;
 			sourceTree = "<group>";
@@ -252,7 +268,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B842F323015F9500B25707 /* CAEmitterLayerVCViewController.xib in Resources */,
 				4528096A227308E6009493D1 /* NewsDetailViewController.xib in Resources */,
+				452CC14E22FD69CF00E8D3EA /* LayerViewController.xib in Resources */,
 				452FADF422686825002872B2 /* LaunchScreen.storyboard in Resources */,
 				452FADF122686825002872B2 /* Assets.xcassets in Resources */,
 				452FADEF2268681E002872B2 /* Main.storyboard in Resources */,
@@ -288,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451EC91722DDD41800275270 /* AnimationViewController.m in Sources */,
+				45B842EE2300FC7F00B25707 /* TransformView.m in Sources */,
 				45280969227308E6009493D1 /* NewsDetailViewController.m in Sources */,
 				453FA31522F7C254007C02A5 /* DetailAnimationVC.m in Sources */,
 				45289CDC22D88412006E6A3E /* TimerTestViewController.m in Sources */,
@@ -296,6 +315,7 @@
 				451C298B228BFEC600C286C6 /* Binar search.m in Sources */,
 				45D39BB122DC81A000F2B256 /* LayerViewController.m in Sources */,
 				45D39BAD22DC816000F2B256 /* GCDViewController.m in Sources */,
+				45B842F223015F9500B25707 /* CAEmitterLayerVCViewController.m in Sources */,
 				452FADF722686826002872B2 /* main.m in Sources */,
 				452FADE92268681E002872B2 /* AppDelegate.m in Sources */,
 			);

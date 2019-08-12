@@ -1,8 +1,8 @@
 //
-//  circleView.h
+//  CAEmitterLayerVCViewController.h
 //  testCopy
 //
-//  Created by Air on 2019/8/7.
+//  Created by Air on 2019/8/12.
 //  Copyright © 2019 Air. All rights reserved.
 //
 
@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface circleView : UIView
+@interface CAEmitterLayerVCViewController : UIViewController
+
 @end
 
 NS_ASSUME_NONNULL_END
