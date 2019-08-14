@@ -14,6 +14,8 @@
 @property(nonatomic,strong)circleView * testView;
 @property(nonatomic,strong)UIView * tansView;
 @property(nonatomic,strong)TransformView *shapeView;
+@property(nonatomic,strong)CALayer * tansSlayer;
+
 @end
 
 @implementation LayerViewController
@@ -48,6 +50,10 @@
         make.height.width.equalTo(@100);
         make.centerX.equalTo(self.view);
     }];
+    self.tansSlayer=[CALayer layer];
+  
+    self.tansSlayer.backgroundColor=[UIColor purpleColor].CGColor;
+    [self.tansView.layer addSublayer:self.tansSlayer];
     
     
     self.shapeView=[[TransformView alloc] init];
@@ -62,25 +68,41 @@
     }];
     
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
-        //core Graphices的框架
-//        CGAffineTransform transForm=CGAffineTransformRotate(CGAffineTransformIdentity, M_PI_2);
-//
-//        self.tansView.layer.affineTransform=transForm;
-        //CATransform3D
-        CATransform3D transform = CATransform3DIdentity;
-        //apply perspective
-        transform.m34 = - 1.0 / 500.0;
-        //rotate by 45 degrees along the Y axis
-        transform = CATransform3DTranslate(transform, 100, 0, 100);
-        self.tansView.layer.transform=transform;
-        //self.tansView.layer.doubleSided=NO;
-
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+   self.tansSlayer.frame=self.tansView.bounds;
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self transaction];
+ 
+}
+  //事务 UIView动画与block动画块中都添加了事务
+/*
+ 当CALayer的属性被修改时候，它会调用-actionForKey:
+ 1.CALayerDelegate协议指定的-actionForLayer:forKey  UIView对他关联的Laer实现了这个方法并且返回了Nil;
+ 2.图层接着检查包含属性名称对应行为映射的actions字典
+ 3.图层接着在它的style字典接着搜索属性名
+ 4.定义了每个属性的标准行为的-defaultActionForKey:方法。
+ 
+ */
+-(void)transaction{
+    
+    [CATransaction begin];
+    //set the animation duration to 1 second
+    [CATransaction setAnimationDuration:1.0];
+    [CATransaction setCompletionBlock:^{
+        //rotate the layer 90 degrees
+         [CATransaction setAnimationDuration:3.0];
+        CGAffineTransform transform = self.tansSlayer.affineTransform;
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        self.tansSlayer.affineTransform = transform;
+    }];
+    //隐式动画,单独作用于子图层
+    self.tansSlayer.backgroundColor=[UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0].CGColor;
+    [CATransaction commit];
+    
+}
 
 /*
 #pragma mark - Navigation

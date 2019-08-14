@@ -19,6 +19,8 @@
 		452FADF122686825002872B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452FADF022686825002872B2 /* Assets.xcassets */; };
 		452FADF422686825002872B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452FADF222686825002872B2 /* LaunchScreen.storyboard */; };
 		452FADF722686826002872B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 452FADF622686826002872B2 /* main.m */; };
+		453CCE692303DF320050418C /* DrewPictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 453CCE672303DF320050418C /* DrewPictureVC.m */; };
+		453CCE6D2303E3930050418C /* DrewViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453CCE6C2303E3930050418C /* DrewViewView.m */; };
 		453FA31522F7C254007C02A5 /* DetailAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 453FA31422F7C254007C02A5 /* DetailAnimationVC.m */; };
 		458F168622FACE9A0052C0BB /* circleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 458F168522FACE9A0052C0BB /* circleView.m */; };
 		45B842EE2300FC7F00B25707 /* TransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B842ED2300FC7F00B25707 /* TransformView.m */; };
@@ -51,6 +53,10 @@
 		452FADF322686825002872B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		452FADF522686826002872B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452FADF622686826002872B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		453CCE662303DF320050418C /* DrewPictureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrewPictureVC.h; sourceTree = "<group>"; };
+		453CCE672303DF320050418C /* DrewPictureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrewPictureVC.m; sourceTree = "<group>"; };
+		453CCE6B2303E3930050418C /* DrewViewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrewViewView.h; sourceTree = "<group>"; };
+		453CCE6C2303E3930050418C /* DrewViewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrewViewView.m; sourceTree = "<group>"; };
 		453FA31322F7C254007C02A5 /* DetailAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailAnimationVC.h; sourceTree = "<group>"; };
 		453FA31422F7C254007C02A5 /* DetailAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailAnimationVC.m; sourceTree = "<group>"; };
 		458F168422FACE9A0052C0BB /* circleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circleView.h; sourceTree = "<group>"; };
@@ -197,6 +203,10 @@
 				452CC14D22FD69CF00E8D3EA /* LayerViewController.xib */,
 				45B842EC2300FC7F00B25707 /* TransformView.h */,
 				45B842ED2300FC7F00B25707 /* TransformView.m */,
+				453CCE662303DF320050418C /* DrewPictureVC.h */,
+				453CCE672303DF320050418C /* DrewPictureVC.m */,
+				453CCE6B2303E3930050418C /* DrewViewView.h */,
+				453CCE6C2303E3930050418C /* DrewViewView.m */,
 			);
 			path = layer;
 			sourceTree = "<group>";
@@ -305,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453CCE6D2303E3930050418C /* DrewViewView.m in Sources */,
 				451EC91722DDD41800275270 /* AnimationViewController.m in Sources */,
 				45B842EE2300FC7F00B25707 /* TransformView.m in Sources */,
 				45280969227308E6009493D1 /* NewsDetailViewController.m in Sources */,
@@ -316,6 +327,7 @@
 				45D39BB122DC81A000F2B256 /* LayerViewController.m in Sources */,
 				45D39BAD22DC816000F2B256 /* GCDViewController.m in Sources */,
 				45B842F223015F9500B25707 /* CAEmitterLayerVCViewController.m in Sources */,
+				453CCE692303DF320050418C /* DrewPictureVC.m in Sources */,
 				452FADF722686826002872B2 /* main.m in Sources */,
 				452FADE92268681E002872B2 /* AppDelegate.m in Sources */,
 			);
@@ -461,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 374PTTRTD2;
 				INFOPLIST_FILE = testCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

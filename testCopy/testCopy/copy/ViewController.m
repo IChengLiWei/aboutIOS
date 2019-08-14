@@ -14,6 +14,7 @@
 #import "LayerViewController.h"
 #import "GCDViewController.h"
 #import "AnimationViewController.h"
+#import "DrewPictureVC.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(strong, nonatomic)NSString *strongStr;
 @property(copy, nonatomic)NSString *cStr;
@@ -90,7 +91,11 @@
             
         }
             break;
+        case 6:
+        {
+            cell.textLabel.text=@"画图";
             
+        }
         default:
             break;
     }
@@ -144,6 +149,14 @@
             
         }
             break;
+        case 6:
+        {
+            DrewPictureVC *nextVC=[[  DrewPictureVC alloc] init];
+            [self.navigationController pushViewController:nextVC animated:YES];
+            
+        }
+            break;
+        
 }
 }
 @end

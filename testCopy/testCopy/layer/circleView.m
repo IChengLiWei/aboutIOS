@@ -14,16 +14,17 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+
         self.layer.backgroundColor=[UIColor greenColor].CGColor;
     }
     return self;
 }
 //当视图出现在屏幕上时, 自动调用
 - (void)drawRect:(CGRect)rect{
-   
+
     NSLog(@"drawRect");
 }
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     [self cycleAndShadow:self];
@@ -49,6 +50,7 @@
     shadowLayer.cornerRadius=halfHeight;
     [clipView.superview.layer insertSublayer:shadowLayer below:clipView.layer];
 }
+
 //- (void)displayLayer:(CALayer *)layer{
 //    NSLog(@"displaydisplay");
 //}

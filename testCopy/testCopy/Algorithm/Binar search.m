@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-    [self configUI];
 
 }
 -(void)configUI{
@@ -56,7 +55,11 @@
     [self.collectionView reloadData];
    
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UILabel *lab =[[UILabel alloc] initWithFrame:CGRectMake(0,  0, 30  , 80)];
+    lab.text=@"123";
+    [self.view addSubview:lab];
+}
 
 //生成随机数组
 -(void)randArr{

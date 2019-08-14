@@ -6,7 +6,7 @@
 //  Copyright © 2019 Air. All rights reserved.
 //
 #define buttonName @[@"位移",@"缩放",@"透明度",@"旋转",@"圆角",@"spring动画",@"备用"]
-#define buttonName2 @[@"震动",@"path位移",@"转场渐变",@"转场覆盖",@"转场推出",@"转场揭开",@"转场水波",@"转场立体旋转",@"转场撕开",@"转场丢弃"]
+#define buttonName2 @[@"震动",@"path位移",@"转场渐变",@"转场覆盖",@"转场推出",@"转场揭开",@"转场水波",@"转场立体旋转",@"转场撕开",@"转场丢弃",@"自定义转场1"]
 
 #import "DetailAnimationVC.h"
 #import <Masonry.h>
@@ -17,10 +17,26 @@
 @end
 
 @implementation DetailAnimationVC
+//
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
+    [btn setTitle:@"暂停动画" forState:UIControlStateNormal];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).offset(30);
+        make.centerX.equalTo(self.view);
+        make.width.equalTo(@80);
+        make.height.equalTo(@40);
+    }];
+    [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor=[UIColor whiteColor];
  
         switch (self.index) {
@@ -253,6 +269,16 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
         }
             
             break;
+        case 10:
+        {//转场1
+            
+            
+            [self performTransition];
+            return;
+            
+        }
+            
+            break;
             
         default:
             break;
@@ -262,6 +288,29 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
 
     self.aniLayer.backgroundColor=[UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0].CGColor;
           [self.aniLayer addAnimation:transiAni forKey:@"TransitionFade"];
+}
+- (IBAction)performTransition
+{
+    //preserve the current view snapshot
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 0.0);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *coverImage = UIGraphicsGetImageFromCurrentImageContext();
+    //insert snapshot view in front of this one
+    UIView *coverView = [[UIImageView alloc] initWithImage:coverImage];
+    coverView.frame = self.view.bounds;
+    [self.view addSubview:coverView];
+    //update the view (we'll simply randomize the layer background color)
+    CGFloat red = arc4random() / (CGFloat)INT_MAX;
+    CGFloat green = arc4random() / (CGFloat)INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    //perform animation (anything you like)
+   CATransition *  transiAni = [CATransition animation];
+    transiAni.type = @"suckEffect";
+    transiAni.subtype = kCATransitionFromBottom;
+    transiAni.duration = 1.5;
+    [coverView removeFromSuperview];
+    [self.view.layer addAnimation:transiAni forKey:@"TransitionFade"];
 }
 -(void)basicAnimationWithTag:(NSInteger)tag{
     CABasicAnimation *basicAni = nil;
@@ -383,7 +432,9 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
 }
 
 
-
+-(void)clickBtn:(UIButton*)sender{
+  
+}
 
 
 
