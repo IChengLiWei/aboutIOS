@@ -25,6 +25,7 @@
     [super viewDidLoad];
 
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:btn];
     [btn setTitle:@"暂停动画" forState:UIControlStateNormal];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view).offset(30);
@@ -306,7 +307,7 @@ usingSpringWithDamping:0.0-1.0(数值越大d,动画停止越快) initialSpringVe
     self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     //perform animation (anything you like)
    CATransition *  transiAni = [CATransition animation];
-    transiAni.type = @"suckEffect";
+    transiAni.type = @"cube";
     transiAni.subtype = kCATransitionFromBottom;
     transiAni.duration = 1.5;
     [coverView removeFromSuperview];

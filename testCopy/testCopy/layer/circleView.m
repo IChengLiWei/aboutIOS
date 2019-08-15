@@ -19,12 +19,6 @@
     }
     return self;
 }
-//当视图出现在屏幕上时, 自动调用
-- (void)drawRect:(CGRect)rect{
-
-    NSLog(@"drawRect");
-}
-
 - (void)layoutSubviews{
     [super layoutSubviews];
     [self cycleAndShadow:self];
@@ -50,26 +44,4 @@
     shadowLayer.cornerRadius=halfHeight;
     [clipView.superview.layer insertSublayer:shadowLayer below:clipView.layer];
 }
-
-//- (void)displayLayer:(CALayer *)layer{
-//    NSLog(@"displaydisplay");
-//}
-//
-//- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
-//    layer.backgroundColor=[UIColor greenColor].CGColor;
-//    CGContextSetLineWidth(ctx, 10.0f);
-//    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
-//    CGContextStrokeEllipseInRect(ctx, layer.bounds);
-//    NSLog(@"drawLayer");
-//}
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
 @end

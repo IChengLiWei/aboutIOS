@@ -22,6 +22,7 @@
 		453CCE692303DF320050418C /* DrewPictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 453CCE672303DF320050418C /* DrewPictureVC.m */; };
 		453CCE6D2303E3930050418C /* DrewViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453CCE6C2303E3930050418C /* DrewViewView.m */; };
 		453FA31522F7C254007C02A5 /* DetailAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 453FA31422F7C254007C02A5 /* DetailAnimationVC.m */; };
+		4588E0AD23050ECE00ACCC1D /* GridientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4588E0AC23050ECE00ACCC1D /* GridientLayerView.m */; };
 		458F168622FACE9A0052C0BB /* circleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 458F168522FACE9A0052C0BB /* circleView.m */; };
 		45B842EE2300FC7F00B25707 /* TransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B842ED2300FC7F00B25707 /* TransformView.m */; };
 		45B842F223015F9500B25707 /* CAEmitterLayerVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B842F023015F9500B25707 /* CAEmitterLayerVCViewController.m */; };
@@ -59,6 +60,8 @@
 		453CCE6C2303E3930050418C /* DrewViewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrewViewView.m; sourceTree = "<group>"; };
 		453FA31322F7C254007C02A5 /* DetailAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailAnimationVC.h; sourceTree = "<group>"; };
 		453FA31422F7C254007C02A5 /* DetailAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailAnimationVC.m; sourceTree = "<group>"; };
+		4588E0AB23050ECE00ACCC1D /* GridientLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridientLayerView.h; sourceTree = "<group>"; };
+		4588E0AC23050ECE00ACCC1D /* GridientLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridientLayerView.m; sourceTree = "<group>"; };
 		458F168422FACE9A0052C0BB /* circleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circleView.h; sourceTree = "<group>"; };
 		458F168522FACE9A0052C0BB /* circleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = circleView.m; sourceTree = "<group>"; };
 		45B842EC2300FC7F00B25707 /* TransformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformView.h; sourceTree = "<group>"; };
@@ -207,6 +210,8 @@
 				453CCE672303DF320050418C /* DrewPictureVC.m */,
 				453CCE6B2303E3930050418C /* DrewViewView.h */,
 				453CCE6C2303E3930050418C /* DrewViewView.m */,
+				4588E0AB23050ECE00ACCC1D /* GridientLayerView.h */,
+				4588E0AC23050ECE00ACCC1D /* GridientLayerView.m */,
 			);
 			path = layer;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				45D39BB122DC81A000F2B256 /* LayerViewController.m in Sources */,
 				45D39BAD22DC816000F2B256 /* GCDViewController.m in Sources */,
 				45B842F223015F9500B25707 /* CAEmitterLayerVCViewController.m in Sources */,
+				4588E0AD23050ECE00ACCC1D /* GridientLayerView.m in Sources */,
 				453CCE692303DF320050418C /* DrewPictureVC.m in Sources */,
 				452FADF722686826002872B2 /* main.m in Sources */,
 				452FADE92268681E002872B2 /* AppDelegate.m in Sources */,

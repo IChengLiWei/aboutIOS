@@ -10,12 +10,13 @@
 #import "circleView.h"
 #import <Masonry.h>
 #import "TransformView.h"
+#import "GridientLayerView.h"
 @interface LayerViewController ()<CALayerDelegate>
 @property(nonatomic,strong)circleView * testView;
 @property(nonatomic,strong)UIView * tansView;
 @property(nonatomic,strong)TransformView *shapeView;
 @property(nonatomic,strong)CALayer * tansSlayer;
-
+@property(nonatomic,strong)GridientLayerView * griView;
 @end
 
 @implementation LayerViewController
@@ -54,7 +55,13 @@
   
     self.tansSlayer.backgroundColor=[UIColor purpleColor].CGColor;
     [self.tansView.layer addSublayer:self.tansSlayer];
-    
+    self.griView=[[GridientLayerView alloc] init];
+    [self.view addSubview:_griView];
+    [self.griView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view).offset(-10);
+        make.centerY.equalTo(self.tansView);
+        make.width.height.equalTo(@100);
+    }];
     
     self.shapeView=[[TransformView alloc] init];
    
