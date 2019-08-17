@@ -26,10 +26,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     [self.tabView reloadData];
     self.section1=@[@"代码段动画",@"block动画之spring动画",@"基本动画",@"帧动画",@"特殊动画"];
-   
-    
 
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
